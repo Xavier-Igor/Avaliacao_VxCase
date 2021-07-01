@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SaleRequest;
 use Illuminate\Http\Request;
 use App\Models\Sale;
 use Carbon\Carbon;
@@ -30,18 +31,9 @@ class SaleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SaleRequest $request)
     {
-        $validator = Validator::make($request->all(),[
-            'purchase_at' => 'required|date|before:tomorrow',
-            'delivery_days' => 'required',
-            'amount' => 'required',
-            'products'=>'required',
-        ]);
-        
-        if ($validator->fails()) {
-          return response()->json(['errors'=>$validator->errors()], 422);
-        }
+
     
         $sale = new Sale;
         $sale->purchase_at = Carbon::parse($request->purchase_at);
@@ -70,7 +62,7 @@ class SaleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SaleRequest $request, $id)
     {
         $sale = Sale::find($id);
         $sale->purchase_at = Carbon::parse($request->purchase_at);
