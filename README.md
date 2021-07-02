@@ -22,11 +22,9 @@
  `localhost:8000`  
 
 
-# Resolução dos desafios
+# Issues
 
 - **Organizar os Models em uma pasta (Nível Básico)**  
-
-    Movidas para `app/Models/`.
 
 - **Implementar FormRequest nos Controllers (Nível Básico)** 
 
@@ -34,17 +32,8 @@
 
 - **Criar um command para inserir um produto via terminal (Nível Intermediário)**  
 
-	Exemplo: `docker-compose exec app php artisan product:create "Cabo USB"`.
-
 - **Adicionar Docker ao projeto (Nível Intermediário)**  
 
-    Passo a Passo na sessão acima.
-
-- **Criar uma Job (Nível Avançado)**  
-    Para Utilização deste recurso, informar URL valida na variavel SLACK_NOTIFICATION_URL no arquivo .env
-
-    Exemplo: `SLACK_NOTIFICATION_URL=https://hooks.slack.com/services/...`.
-    
-    Executando tarefa `docker-compose exec app php artisan schedule:run`.
+- **Criar uma Job (Nível Avançado)** 
     
 # Autor: IGOR XAVIER
