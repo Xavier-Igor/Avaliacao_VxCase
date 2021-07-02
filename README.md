@@ -26,7 +26,7 @@
 
 - **Organizar os Models em uma pasta (Nível Básico)**  
 
-    Todas as Models foram movidas para `app/Models/`.
+    Movidas para `app/Models/`.
 
 - **Implementar FormRequest nos Controllers (Nível Básico)** 
 
