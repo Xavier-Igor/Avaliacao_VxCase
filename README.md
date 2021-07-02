@@ -32,7 +32,7 @@
 
  `docker-compose exec app php artisan migrate --seed`  
 
- 7. Projeto servido na url: :green_circle:
+ 7. Projeto servido em: :green_circle:
 
  `127.0.0.1:8000`  
 
