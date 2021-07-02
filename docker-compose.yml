@@ -16,22 +16,22 @@ services:
     networks:
       - avaliacao-vx
   db:
-    image: "mysql:5.7"
+    image: mysql:5.7
     container_name: avaliacao-vx-db
-    restart: unless-stopped
+    restart: always
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
       SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
+      SERVICE_NAME: db
+    ports:
+      - '3306:3306'
     volumes:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
       - avaliacao-vx
-    ports:
-      - "3306:3306"
-    
+
   nginx:
     image: nginx:alpine
     container_name: avaliacao-vx-nginx
