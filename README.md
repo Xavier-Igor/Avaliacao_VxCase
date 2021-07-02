@@ -22,9 +22,9 @@
  `localhost:8000`  
 
 
-# Issues
+# Issues Propostas
 
-- **Organizar os Models em uma pasta (Nível Básico)**  
+ - **Organizar os Models em uma pasta (Nível Básico)** heavy_check_mark  
 
 - **Implementar FormRequest nos Controllers (Nível Básico)** 
 
@@ -35,5 +35,9 @@
 - **Adicionar Docker ao projeto (Nível Intermediário)**  
 
 - **Criar uma Job (Nível Avançado)** 
+
+
+
+
     
 # Autor: IGOR XAVIER
