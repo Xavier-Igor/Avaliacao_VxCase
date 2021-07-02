@@ -26,15 +26,15 @@
 
  - **Organizar os Models em uma pasta (Nível Básico)** :heavy_check_mark:
 
-- **Implementar FormRequest nos Controllers (Nível Básico)** 
+- **Implementar FormRequest nos Controllers (Nível Básico)** :heavy_check_mark:
 
-- **Implementar FormRequest nos Controllers (Nível Básico)**   
+- **Implementar FormRequest nos Controllers (Nível Básico)** :heavy_check_mark:
 
-- **Criar um command para inserir um produto via terminal (Nível Intermediário)**  
+- **Criar um command para inserir um produto via terminal (Nível Intermediário)** :heavy_check_mark: 
 
-- **Adicionar Docker ao projeto (Nível Intermediário)**  
+- **Adicionar Docker ao projeto (Nível Intermediário)** :heavy_check_mark:
 
-- **Criar uma Job (Nível Avançado)** 
+- **Criar uma Job (Nível Avançado)** :heavy_check_mark:
 
 
 
