@@ -1,4 +1,4 @@
-# Avaliação para vaga de DEV VX CASE
+# Avaliação VX CASE - BACKEND
 
 ## Autor: Igor Xavier  
 
@@ -33,7 +33,7 @@
 - **Implementar FormRequest nos Controllers (Nível Básico)** 
 
 - **Implementar o conceito de Repositories no projeto**   
- 	
+
 - **Criar um command para inserir um produto via terminal**  
 
 	Exemplo: `docker-compose exec app php artisan product:create "Camisa"`.
