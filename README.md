@@ -45,5 +45,6 @@
 - **Criar uma Job (Nível Avançado)**  
     Criar variavel `SLACK_NOTIFICATION_URL` no arquivo `.env` e utilizar WEBHOOK_URL valida.
     Exemplo: `SLACK_NOTIFICATION_URL=https://hooks.slack.com/services/...`.
-    `docker-compose exec app php artisan schedule:run`.
+    Executando tarefa `docker-compose exec app php artisan schedule:run`.
+    
     
