@@ -1,10 +1,12 @@
-# Avaliação VX CASE - BACKEND
-  
+cd Avaliacao_VxCase# Avaliação VX CASE - BACKEND
+
+## Autor: Igor Xavier  
+
 ## Deploy
 
  1. Clone este repositório  
  ` git clone https://github.com/Xavier-Igor/Avaliacao_VxCase.git`  
- `cd Avaliacao_VxCase`  
+ `cd avaliacao-vxcase`  
  2. Configure o ambiente:  
  `cp .env.example .env`  
  Setar variável `DB_HOST` do arquivo `.env` seja setada com `db`.
@@ -22,7 +24,7 @@
  `localhost:8000`  
 
 
-# Resolução dos desafios
+## Resolução dos desafios
 
 - **Organizar os Models em uma pasta (Nível Básico)**  
 
@@ -34,7 +36,7 @@
 
 - **Criar um command para inserir um produto via terminal (Nível Intermediário)**  
 
-	Exemplo: `docker-compose exec app php artisan product:create "Cabo USB"`.
+	Exemplo: `docker-compose exec app php artisan product:create "Camisa"`.
 
 - **Adicionar Docker ao projeto (Nível Intermediário)**  
 
@@ -47,4 +49,4 @@
     
     Executando tarefa `docker-compose exec app php artisan schedule:run`.
     
-# Autor: IGOR XAVIER
+    
