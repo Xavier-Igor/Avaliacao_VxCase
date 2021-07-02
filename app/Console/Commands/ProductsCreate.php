@@ -46,8 +46,8 @@ class ProductsCreate extends Command
 
             $product->reference = $this->argument('reference');
         } elseif ($this->argument('reference') === null) {
-
-            $product->reference = 'VX-00000';
+            $r = rand(1,99999);
+            $product->reference = "VX-$r";
         }
         if ($this->argument('price') != null) {
 
