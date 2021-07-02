@@ -5,7 +5,7 @@
 ## Deploy
 
  1. Clone este repositório  
- ` git clone https://github.com/Rafaeldsant/avaliacao-vxcase.git`  
+ ` git clone https://github.com/Xavier-Igor/Avaliacao_VxCase.git`  
  `cd avaliacao-vxcase`  
  2. Configure o ambiente:  
  `cp .env.example .env`  
