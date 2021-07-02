@@ -10,11 +10,6 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-
-    public function routeNotificationForSlack($notification){
-        return 'https://hooks.slack.com/services/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';
-    }
-
     /**
      * The attributes that are mass assignable.
      *
