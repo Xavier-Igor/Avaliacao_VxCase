@@ -2,15 +2,15 @@
 
 namespace App\Jobs;
 
-use App\Models\User;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Notifications\Notification;
 use App\Notifications\jobslack;
+
+use Notification;
 
 
 class SendNotification implements ShouldQueue
@@ -25,10 +25,10 @@ class SendNotification implements ShouldQueue
      * @return void
      */
 
-     protected $user;
-    public function __construct(User $user)
+  
+    public function __construct()
     {
-        $this->user = $user;
+
     }
 
     /**
@@ -38,8 +38,8 @@ class SendNotification implements ShouldQueue
      */
     public function handle()
     {
-        $user = User::first();
-        $user->notify(new jobslack);
+        $slackUrl = env('SLACK_NOTIFICATION_URL');
+        Notification::route('slack', $slackUrl)->notify(new jobslack());
 
   }
 }

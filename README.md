@@ -32,9 +32,9 @@
 
 - **Implementar FormRequest nos Controllers (Nível Básico)** 
 
-- **Implementar o conceito de Repositories no projeto**   
+- **Implementar FormRequest nos Controllers (Nível Básico)**   
 
-- **Criar um command para inserir um produto via terminal**  
+- **Criar um command para inserir um produto via terminal (Nível Intermediário)**  
 
 	Exemplo: `docker-compose exec app php artisan product:create "Camisa"`.
 
@@ -42,4 +42,4 @@
 
     Passo a Passo na sessão acima.
 
-- **Criar uma Job**  
+- **Adicionar Docker ao projeto (Nível Intermediário)**  
