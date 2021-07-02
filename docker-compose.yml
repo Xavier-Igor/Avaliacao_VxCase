@@ -7,8 +7,8 @@ services:
         uid: 1000
       context: ./
       dockerfile: Dockerfile
-    image: avaliacao_VX
-    container_name: avaliacao_VX-app
+    image: avaliacao_vx
+    container_name: avaliacao_vx-app
     restart: unless-stopped
     working_dir: /var/www/
     volumes:
@@ -17,7 +17,7 @@ services:
       - avaliacao_vx
 
   db:
-    image: mysql:5.7
+    image: "mysql:5.7"
     container_name: avaliacao_vx-db
     restart: unless-stopped
     environment:
@@ -30,9 +30,9 @@ services:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
       - avaliacao_vx
-      ports:
-        - "3306:3306"
-
+    ports:
+      - "3306:3306"
+    
   nginx:
     image: nginx:alpine
     container_name: avaliacao_vx-nginx
@@ -46,5 +46,5 @@ services:
       - avaliacao_vx
 
 networks:
-  travellist:
+  avaliacao_vx:
     driver: bridge

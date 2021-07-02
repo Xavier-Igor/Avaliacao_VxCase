@@ -11,10 +11,10 @@ use Illuminate\Http\Request;
 
 class ProductRepository
 {
-    protected $products;
+    protected $product;
     public function __construct(Product $product)
     {
-        $this->products = $product;
+        $this->product = $product;
     }
 
     public function all(Request $request)
