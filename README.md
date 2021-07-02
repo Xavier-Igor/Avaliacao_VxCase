@@ -7,7 +7,7 @@
  `cd Avaliacao_VxCase`  
  2. Configure o ambiente:  
  `cp .env.example .env`  
- Setar variável `DB_HOST` do arquivo `.env` seja setada com `db`.
+ :warning: Setar variável `DB_HOST` do arquivo `.env` seja setada com `db`.
  3. Compile a imagem:  
  `docker-compose build app`  
  4. Execute o ambiente:  
