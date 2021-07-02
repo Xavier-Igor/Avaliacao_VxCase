@@ -41,7 +41,7 @@
     Passo a Passo na sessão acima.
 
 - **Criar uma Job (Nível Avançado)**  
-    Criar variavel `SLACK_NOTIFICATION_URL` no arquivo `.env` e utilizar WEBHOOK_URL valida.
+    Para Utilização deste recurso, informar URL valida na variavel SLACK_NOTIFICATION_URL no arquivo .env
 
     Exemplo: `SLACK_NOTIFICATION_URL=https://hooks.slack.com/services/...`.
     
