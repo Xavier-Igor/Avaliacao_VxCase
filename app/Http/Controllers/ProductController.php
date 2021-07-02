@@ -3,11 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
-use App\Models\Product;
+use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+    protected $product;
+
+    public function __construct(ProductRepository $product)
+    {
+        $this->product = $product;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,12 +23,8 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        if(isset($request->product_name))
-            $query = strtoupper($request->product_name);
-            return Product::where('name','LIKE','%'.$query.'%')
-                        ->orWhere('reference','LIKE','%'.$query.'%')->get();
-
-        return Product::all();
+        
+        return $this->product->all($request);
     }
     /**
      * Store a newly created resource in storage.
@@ -30,8 +34,7 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        $product = new Product;
-        $product->create($request->all());
+        $this->product->create($request);
         return Response()->json('Produto cadastrado!', 201);
     }
 
@@ -43,7 +46,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return Product::find($id);
+        return $this->product->find($id);
     }
 
 
@@ -56,12 +59,7 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
-        $product = Product::find($id);
-        $product->name = $request->name;
-        $product->reference = $request->reference;
-        $product->price = $request->price;
-        $product->delivery_days = $request->delivery_days;
-        $product->save();
+        $this->product->update($request,$id);
         return Response()->json('Produto Atualizado!', 200);
 
     }
@@ -74,8 +72,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $product = Product::find($id);
-        $product->delete();
+        $this->product->destroy($id);
         return Response()->json('Produto Excluido!', 200);
 
     }

@@ -30,4 +30,10 @@ class SaleRequest extends FormRequest
             'products' => 'required',
         ];
     }
+
+
+    public function mensages()
+    {
+        
+    }
 }
