@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Jobs\SendNotification;
 use Illuminate\Support\ServiceProvider;
+use App;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
+        $this->app->bind('App\Jobs\SendNotification');
+
     }
 
     /**
