@@ -24,7 +24,7 @@
 
 # Issues Propostas
 
- - **Organizar os Models em uma pasta (Nível Básico)** heavy_check_mark  
+ - **Organizar os Models em uma pasta (Nível Básico)** :heavy_check_mark:
 
 - **Implementar FormRequest nos Controllers (Nível Básico)** 
 
