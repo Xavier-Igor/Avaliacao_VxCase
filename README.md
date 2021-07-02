@@ -57,6 +57,7 @@
 
 - 6#  :warning: Para Utilização deste recurso, informar URL valida na variavel `SLACK_NOTIFICATION_URL` no arquivo .env :warning:
 Exemplo: `SLACK_NOTIFICATION_URL=https://hooks.slack.com/services/...`.
+
 :green_circle:  Executando tarefa `docker-compose exec app php artisan schedule:run`.
 
 
