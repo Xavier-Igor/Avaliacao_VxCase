@@ -8,25 +8,32 @@
  `cd Avaliacao_VxCase`  
 
  2. Configure o ambiente: :arrow_down:	
+
  `cp .env.example .env`  
  :warning: Setar variável `DB_HOST` do arquivo `.env` seja setada com `db`. :warning:	
 
  3. Compile a imagem: :arrow_down:	
+
  `docker-compose build app`  
 
  4. Execute o ambiente: :arrow_down:	  
+
  `docker-compose up -d`
 
  5. Instale as dependências: :arrow_down:	  
+
  `docker-compose exec app composer install`
  
  6. Gere uma key: :arrow_down:	 
+
  `docker-compose exec app php artisan key:generate`
 
- 8. Populando banco de dados: :arrow_down:	   
+ 8. Populando banco de dados: :arrow_down:
+
  `docker-compose exec app php artisan migrate --seed`  
- 
- 7. Projeto servido na url: :green_circle:	
+
+ 7. Projeto servido na url: :green_circle:
+
  `127.0.0.1:8000`  
 
 
@@ -44,7 +51,13 @@
 
 - 6# **Criar uma Job (Nível Avançado)** :heavy_check_mark:
 
-##
+## Exemplos Issues 4# 6#
+
+- 4# :green_circle: Exemplo: `docker-compose exec app php artisan product:create "Cabo USB"`.
+
+- 6#  :warning: Para Utilização deste recurso, informar URL valida na variavel `SLACK_NOTIFICATION_URL` no arquivo .env :warning:
+Exemplo: `SLACK_NOTIFICATION_URL=https://hooks.slack.com/services/...`.
+:green_circle:  Executando tarefa `docker-compose exec app php artisan schedule:run`.
 
 
     
